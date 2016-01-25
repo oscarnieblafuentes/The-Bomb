@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redBomb: UIImageView!
+    
+    @IBOutlet weak var blueBomb: UIImageView!
+    
+    @IBOutlet weak var bb: UIButton!
+    
+    @IBOutlet weak var rb: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +26,19 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+
+    @IBAction func blowUpBB(sender: AnyObject) {
+    
+    blueBomb.hidden = true
+    bb.hidden = true
+    }
+    
+
+    @IBAction func blowUpRB(sender: AnyObject) {
+    redBomb.hidden = true
+    rb.hidden = true 
     }
 
 

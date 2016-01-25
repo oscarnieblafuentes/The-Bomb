@@ -17,29 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF1-Cl-k5g">
-                                <rect key="frame" x="265" y="532" width="71" height="30"/>
-                                <state key="normal" title="Red Bomb">
-                                    <color key="titleColor" red="0.73282068062827221" green="0.054211174473938674" blue="0.064499210428279233" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluebomb" translatesAutoresizingMaskIntoConstraints="NO" id="tam-c2-OzA">
                                 <rect key="frame" x="20" y="129" width="240" height="193"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cgk-FB-6wQ">
+                                <rect key="frame" x="256" y="444" width="75" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaT-GG-A8j">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
+                                        <state key="normal" title="Blue Bomb"/>
+                                        <connections>
+                                            <action selector="blowUpRB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVR-Jz-UDL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redbomb" translatesAutoresizingMaskIntoConstraints="NO" id="ucj-fq-p9Q">
-                                <rect key="frame" x="361" y="129" width="219" height="193"/>
+                                <rect key="frame" x="361" y="143" width="219" height="193"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaT-GG-A8j">
-                                <rect key="frame" x="256" y="444" width="89" height="30"/>
-                                <state key="normal" title="Blue Bomb"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF1-Cl-k5g">
+                                <rect key="frame" x="256" y="531" width="71" height="30"/>
+                                <state key="normal" title="Red Bomb">
+                                    <color key="titleColor" red="0.73282068062827221" green="0.054211174473938674" blue="0.064499210428279233" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="blowUpBB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3r1-Eh-obG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="bb" destination="OaT-GG-A8j" id="81K-Gj-DZJ"/>
+                        <outlet property="blueBomb" destination="tam-c2-OzA" id="XZ6-4F-Tf2"/>
+                        <outlet property="rb" destination="vF1-Cl-k5g" id="jAg-eY-yNd"/>
+                        <outlet property="redBomb" destination="ucj-fq-p9Q" id="JxO-4p-Obc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="429"/>
+            <point key="canvasLocation" x="284" y="217"/>
         </scene>
     </scenes>
     <resources>
